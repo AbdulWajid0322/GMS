@@ -1,0 +1,74 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="OnlineGymMaster.master.cs" Inherits="OnlineGym.OnlineGymMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Online Gym Handling</title>
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600" rel="stylesheet" type="text/css" />
+<link href='http://fonts.googleapis.com/css?family=Abel|Satisfy' rel='stylesheet' type='text/css' />
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+
+<asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body background="images/bg.jpg">
+<form id="form1" runat="server">
+<div id="wrapper">
+    <div id="header-wrapper">
+    	<div id="header" class="container">
+        	<div id="logo">
+				<h1><%--<a href="#">Muscle Planet</a>--%><img src="images/logo.png" width="400px" height="60px"</h1>
+                <br />
+                
+			</div>			
+            <div id="menu">
+            
+				<ul>
+					<li class="current_page_item"><a href="Home.aspx">Home</a></li>
+					<li class="current_page_item"><a href="Features.aspx">Features</a></li>
+                    <li class="current_page_item"><a href="Timings.aspx">Timings</a></li>
+					<li class="current_page_item"><a href="Fees.aspx">Fees</a></li>
+					<li class="current_page_item"><a href="AboutUs.aspx">About</a></li>
+					<li class="current_page_item"><a href="ContactUs.aspx">Contact</a></li>
+
+                    <li class="current_page_item" id="liUser" runat="server"><a href="AddUserDetails.aspx">Users</a></li>
+                    <li class="current_page_item" id="liTimeTable" runat="server"><a href="ManageTimeTable.aspx">TimeTable</a></li>
+                    <li class="current_page_item" id="liTrainer" runat="server"><a href="ManageTrainers.aspx">Trainers</a></li>
+                    <li class="current_page_item" id="liFees" runat="server"><a href="ManageUserFees.aspx">Fees</a></li>
+                    <li class="current_page_item" id="liViewFees" runat="server"><a href="ViewUserFees.aspx">View Fees</a></li>
+                    
+                    <li class="current_page_item" id="liCategory" runat="server"><a href="ManageCategory.aspx">Category</a></li>
+                    <li class="current_page_item" id="liCategoryDet" runat="server"><a href="CategoryDetails.aspx">Category Details</a></li>
+                    <li class="current_page_item" id="liViewDailyWO" runat="server"><a href="DailyWorkoutReport.aspx">View DWO</a></li>
+                    <li class="current_page_item" id="liViewUserDWO" runat="server"><a href="UserDailyWorkOut.aspx">View DWO</a></li>
+                    <li class="current_page_item" id="liManageDWO" runat="server"><a href="ManageDailyWorkout.aspx">Manage DWO</a></li>
+                    <li class="current_page_item"><asp:LinkButton ID="lbLogin" runat="server" 
+                            onclick="lbLogin_Click" CausesValidation="False">Login</asp:LinkButton></li>
+
+
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- end #header -->
+	
+
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+
+	<!-- end #page --> 
+</div>
+    </form>
+<div id="footer">
+	<p>Copyright (c) 2012 Sitename.com. All rights reserved. Images by <a href="http://fotogrph.com/">Fotogrph</a>. Design by <a href="http://www.freecsstemplates.org">FCT</a>.</p>
+</div>
+<!-- end #footer -->
+</body>
+</html>
